@@ -46,7 +46,8 @@ def delete_specific_file_type(ft):
 def rename_specific_file(old_name, new_name):
     os.rename(old_name, new_name)
 
-# Главное меню программы
+
+
 def main():
     while True:
         print("\nМеню:")
@@ -58,7 +59,6 @@ def main():
         print("6. Удалить дубликаты файлов из директории")
         print("7. Удалить пустые директории")
         print("8. Удалить файлы определенного типа")
-        # print("9. Переименовать файлы по выбранному признаку")
         print("9. Переименовать конкретный файл")
         print("0. Выйти")
         choice = input("Выберите действие: ")
@@ -78,12 +78,8 @@ def main():
         elif choice == '7':
             delete_empty_directories()
         elif choice == '8':
-            extension = input("Введите тип удаляемых файлов (расширение): ")
+            extension = input("Введите тип удаляемых файлов: ")
             delete_specific_file_type(extension)
-        # elif choice == '9':
-        #     old_pattern = input("Введите старый паттерн имени файла: ")
-        #     new_pattern = input("Введите новый паттерн имени файла: ")
-        #     rename_file_by_pattern(old_pattern, new_pattern)
         elif choice == '9':
             old_name = input("Введите текущее имя файла: ")
             new_name = input("Введите новое имя файла: ")
